@@ -1,0 +1,9 @@
+{
+    "colors": {
+      "primary": "#DB3422", //blood orange
+      "secondary": "#047FA9", // royal blue-ish
+      "tertiary": "#2A1C57", //purple
+      "light": "#FCF8DB", // sort of a pinkish white
+      "dark": "#161719"  // ash grey/black
+  }
+}
