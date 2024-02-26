@@ -128,7 +128,9 @@ header {
   padding-top: 3em;
 }
 header .fh5co-navbar-brand {
-  padding-bottom: 3em;
+  /* padding-bottom: 1em; removed because of logo*/
+  display: flex;
+  align-items: center; /*added code for the blackdome logo nex to image */
 }
 header .fh5co-navbar-brand .fh5co-logo {
   position: relative;
@@ -138,13 +140,19 @@ header .fh5co-navbar-brand .fh5co-logo {
   font-weight: 700;
   letter-spacing: 1px;
 }
+header .fh5co-navbar-brand img {
+  width: 15rem; /* Set the width of the image */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+  margin-right: 60px; /* Adjust margin for spacing */
+  padding-bottom: none;
+}
 header .fh5co-navbar-brand .fh5co-logo:after {
   position: absolute;
   bottom: 13px;
   right: -14px;
   width: 12px;
   height: 12px;
-  background: var(--primary-color);
+  /* background: var(--primary-color); for header dot */
   content: '';
 }
 header .fh5co-navbar-brand .fh5co-logo:hover {
@@ -166,6 +174,9 @@ header #fh5co-main-nav > ul li {
     margin-left: 0;
     margin-bottom: 15px;
   }
+  header .fh5co-logo {
+    display: none;
+  }
 }
 header #fh5co-main-nav > ul li a {
   padding-bottom: 5px;
@@ -177,7 +188,7 @@ header #fh5co-main-nav > ul li a.active:before {
   position: absolute;
   width: 7px;
   height: 7px;
-  content: '';
+  content: ''; /* for active tab dot*/
   top: -5px;
   right: -7px;
   background: var(--primary-color);
@@ -188,7 +199,7 @@ header #fh5co-main-nav > ul li a.active:before {
 }
 header #fh5co-main-nav > ul li a:hover, header #fh5co-main-nav > ul li a:focus {
   text-decoration: none;
-  color: var(--dark-color);
+  color: var(--primary-color);
 }
 header #fh5co-main-nav > ul li:first-child {
   margin-left: 0;
@@ -751,7 +762,7 @@ header #fh5co-main-nav > ul li:first-child {
 }
 
 .about {
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
 .about img {
   margin-bottom: 50px;
