@@ -167,6 +167,7 @@ header #fh5co-main-nav > ul li {
   display: inline-block;
   margin-left: 40px;
   font-size: 18px;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 768px) {
   header #fh5co-main-nav > ul li {
@@ -220,11 +221,19 @@ header #fh5co-main-nav > ul li:first-child {
   margin-bottom: 5em;
   max-height: 100%;
 }
+/* image sizing and recentering because most images (especially landscape) are too large and mess up the presentation on full screen */
+.owl-carousel.owl-carousel1 img {
+  width: 60%; /* Adjust the percentage as needed */
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
 
 /* Owl Override Style */
 .owl-carousel .owl-controls,
 .owl-carousel-posts .owl-controls {
-  margin-top: 0;
+  margin-top: -50px;
 }
 
 .owl-carousel .owl-controls .owl-nav .owl-next,
@@ -238,6 +247,7 @@ header #fh5co-main-nav > ul li:first-child {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  color: var(--primary-color);
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next,
@@ -297,11 +307,11 @@ header #fh5co-main-nav > ul li:first-child {
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next i,
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-prev i {
   font-size: 50px;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next:hover i,
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-prev:hover i {
-  color: var(--light-color);
+  color: var(--primary-color);
 }
 
 .owl-carousel .owl-controls .owl-nav .owl-next i,
