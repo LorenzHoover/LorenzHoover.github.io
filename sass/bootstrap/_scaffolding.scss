@@ -80,6 +80,7 @@ img {
 // Responsive images (ensure images don't scale beyond their parents)
 .img-responsive {
   @include img-responsive;
+  padding-top: 5rem;
 }
 
 // Rounded corners
