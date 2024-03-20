@@ -228,6 +228,7 @@ header #fh5co-main-nav > ul li:first-child {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+  border-radius: 10px;
 }
 
 /* Owl Override Style */
@@ -571,6 +572,7 @@ header #fh5co-main-nav > ul li:first-child {
 }
 .fhco-hero2 img {
   margin-top: -50px;
+  border-radius: 10px;
 }
 @media screen and (max-width: 992px) {
   .fhco-hero2 {
@@ -597,7 +599,7 @@ header #fh5co-main-nav > ul li:first-child {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--primary-color);
+  background: var(--dark-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -633,7 +635,7 @@ header #fh5co-main-nav > ul li:first-child {
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--primary-color);
+  background: var(--dark-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -663,23 +665,23 @@ header #fh5co-main-nav > ul li:first-child {
 }
 
 .fh5co-table2-color-2 {
-  background: #F87D09 !important;
+  background: var(--dark-color) !important;
 }
 
 .fh5co-table2-color-3 {
-  background: #17E7A4 !important;
+  background: var(--dark-color)  !important;
 }
 
 .fh5co-table2-color-4 {
-  background: #F9C535 !important;
+  background: var(--dark-color)  !important;
 }
 
 .fh5co-table2-color-5 {
-  background: #51DACF !important;
+  background: var(--dark-color)  !important;
 }
 
 .fh5co-table2-color-6 {
-  background: #FF7676 !important;
+  background: var(--dark-color)  !important;
 }
 
 @media screen and (max-width: 992px) {
@@ -720,7 +722,9 @@ header #fh5co-main-nav > ul li:first-child {
   margin-bottom: 30px;
 }
 .fh5co-grid-work .work-holder img {
-  max-width: 100%;
+  max-width: 60%;
+  border-radius: 20px;
+  max-height: auto;
 }
 .fh5co-grid-work .work-holder .inner-overlay {
   display: block;
@@ -729,8 +733,9 @@ header #fh5co-main-nav > ul li:first-child {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(219, 52, 34, 0.9);
   opacity: 0;
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .work-holder .inner-overlay i {
   position: absolute;
@@ -742,19 +747,24 @@ header #fh5co-main-nav > ul li:first-child {
   font-size: 30px;
 }
 .fh5co-grid-work .work-holder .inner-overlay.inner-overlay-2 {
-  background: rgba(248, 125, 9, 0.9);
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .work-holder .inner-overlay.inner-overlay-3 {
-  background: rgba(23, 231, 164, 0.9);
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .work-holder .inner-overlay.inner-overlay-4 {
-  background: rgba(249, 197, 53, 0.9);
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .work-holder .inner-overlay.inner-overlay-4 {
-  background: rgba(81, 218, 207, 0.9);
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .work-holder .inner-overlay.inner-overlay-5 {
-  background: rgba(255, 118, 118, 0.9);
+  background: rgba(0, 0, 0,0.6);
+  border-radius: 40px;
 }
 .fh5co-grid-work .desc h3 {
   font-size: 20px;
@@ -776,12 +786,14 @@ header #fh5co-main-nav > ul li:first-child {
 }
 .about img {
   margin-bottom: 50px;
+  border-radius: 10px;
 }
 .about .team-section-grid {
   position: relative;
   background-size: cover;
   height: 450px;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
 .about .team-section-grid .overlay-section {
   position: absolute;
@@ -821,6 +833,7 @@ header #fh5co-main-nav > ul li:first-child {
 }
 .about .team-section-grid:hover .overlay-section {
   opacity: 1;
+  border-radius: 10px;
 }
 .about .fh5co-social-icons a {
   color: rgba(255, 255, 255, 0.7);
