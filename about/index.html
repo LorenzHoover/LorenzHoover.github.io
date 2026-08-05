@@ -55,27 +55,29 @@
 	<!-- all the stylesheets above need to be adapted to blackdome-->
 
 	<link rel="stylesheet" href="../css/style.css">
+	<!-- Black Dome additions: banner, hours, store info -->
+	<link rel="stylesheet" href="../css/bd-custom.css">
 
 
 	<!-- Modernizr JS -->
 	<script src="../js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 </head>
 <!-- Head End-->
 
 	<body>
+<!-- Announcement banner. Text is set in site-content.js -->
+<p class="bd-banner" data-bd-banner>We have moved! Find us at 12 Old Charlotte Hwy, Ste 85, in the Highland Brewing complex.</p>
+
 	<header>
 		<div class="container text-center">
 			<div class="fh5co-navbar-brand">
                 <img src="../images/logo_header.png" alt="blackdome logo">
-				<a class="fh5co-logo" href="../home/">Black Dome Mountain Sports</a>
+				<a class="fh5co-logo" href="../">Black Dome Mountain Sports</a>
 			</div>
 			<nav id="fh5co-main-nav" role="navigation">
 				<ul>
-					<li><a href="../home/">Home</a></li>
+					<li><a href="../">Home</a></li>
 					<li><a href="https://blackdome.locally.com/">Shop</a></li>
 					<li><a href="../about/" class="active">About</a></li>
 					<li><a href="../contact/">Contact</a></li>
@@ -108,7 +110,7 @@
 						<span class="number-holder">19</span>
 						<div class="desc">
 							<h3>Quality, value, selection and experience</h3>
-							<p>Black Dome, Asheville's premier outdoor gear provider, has been serving customers for 40 years. Situated a mere half mile from downtown Asheville via the Beaucatcher Tunnel, our family-owned and operated store offers a wide range of outdoor essentials.</p>
+							<p>Black Dome, Asheville's premier outdoor gear provider, has been serving customers for <span data-bd="yearsInBusiness">40</span> years. You will now find us in the Highland Brewing complex in east Asheville, where our family-owned and operated store offers a wide range of outdoor essentials.</p>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 services-num">
@@ -131,6 +133,7 @@
 					<blockquote>
 					  <p>Debby Thomas, integral to Black Dome's success, joined the company full-time in 1995, bringing her expertise in business management and bookkeeping. Her journey intertwined with Black Dome's history, beginning as a visitor to the original Biltmore location in 1986. An avid outdoor enthusiast since her college days in Boone, Debby's transition from teaching to managing Black Dome's administrative affairs reflected her unwavering dedication to the business and her family.</p>
 					</blockquote>
+					<p>After 35 years on Tunnel Road, Black Dome moved in 2026 to a new home in the Highland Brewing complex at <span data-bd="addressFull">12 Old Charlotte Hwy Ste 85, Asheville, NC 28803</span> &mdash; a new chapter in the same city, with the same people behind the counter.</p>
 					<p>From its humble beginnings to becoming Asheville's go-to destination for outdoor enthusiasts, Black Dome Mountain Sports remains rooted in its commitment to providing quality gear and fostering a vibrant outdoor community.</p>
 				</div>
 			</div>
@@ -180,7 +183,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
-						<p>&copy; 2024 Black Dome Mountain Sports <br>Copyright 2016 Free Html5. All Rights Reserved. </br></p>
+                    <!-- Store details. Values come from site-content.js -->
+                    <p class="bd-footer-info">
+                        <span data-bd="addressFull">12 Old Charlotte Hwy Ste 85, Asheville, NC 28803</span><br>
+                        <a data-bd-link="email" href="mailto:info@blackdome.com">info@blackdome.com</a>
+                    </p>
+						<p>&copy; 2026 Black Dome Mountain Sports</p>
 						<p class="fh5co-social-icons">
 							<a href="https://twitter.com/BlackDomeMtn" target="_blank"><i class="icon-twitter-with-circle"></i></a>
 							<a href="https://www.facebook.com/blackdome/" target="_blank"><i class="icon-facebook-with-circle"></i></a>
@@ -208,6 +216,10 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="../js/main.js"></script>
 
-	</body>
+	
+<!-- Store address, phone and hours. Edit site-content.js to change them. -->
+<script src="../site-content.js"></script>
+<script src="../js/site-render.js"></script>
+</body>
 </html>
 

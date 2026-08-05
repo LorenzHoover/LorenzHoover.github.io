@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Bash(git ls-tree *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git reset *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(kill 36746)",
+      "mcp__Claude_in_Chrome__list_connected_browsers",
+      "Bash(python3 -m http.server 8123)",
+      "Bash(curl -s -o /dev/null -w \"root:%{http_code} contact:\" http://localhost:8123/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8123/contact/)",
+      "Bash(node --check site-content.js)"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+/* ============================================================================
+   Black Dome — styles for the store info, hours table and announcement banner.
+   Kept in a separate file so the original theme stylesheet stays untouched.
+   ============================================================================ */
+
+/* --- announcement banner ------------------------------------------------- */
+
+.bd-banner {
+  background: #2b2b2b;
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.bd-banner-accent {
+  color: var(--primary-color, #db3422);
+  font-weight: 600;
+}
+
+/* --- opening hours ------------------------------------------------------- */
+
+.bd-hours {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  max-width: 320px;
+}
+
+.bd-hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bd-hours-row:last-child {
+  border-bottom: 0;
+}
+
+.bd-hours-day {
+  font-weight: 600;
+}
+
+.bd-hours-time {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* --- address block ------------------------------------------------------- */
+
+.bd-address-note {
+  display: block;
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.bd-directions-link {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* --- footer store info --------------------------------------------------- */
+
+.bd-footer-info {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.bd-footer-info a {
+  text-decoration: underline;
+}
+
+/* Footer hours sit inline rather than as a table. */
+.bd-footer-hours .bd-hours {
+  max-width: none;
+  margin: 0 auto 14px auto;
+  display: inline-block;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .bd-hours-row {
+    font-size: 14px;
+  }
+}

@@ -55,27 +55,29 @@
 	<!-- all the stylesheets above need to be adapted to blackdome-->
 
 	<link rel="stylesheet" href="../css/style.css">
+	<!-- Black Dome additions: banner, hours, store info -->
+	<link rel="stylesheet" href="../css/bd-custom.css">
 
 
 	<!-- Modernizr JS -->
 	<script src="../js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 </head>
 <!-- Head End-->
 
 <body>
+<!-- Announcement banner. Text is set in site-content.js -->
+<p class="bd-banner" data-bd-banner>We have moved! Find us at 12 Old Charlotte Hwy, Ste 85, in the Highland Brewing complex.</p>
+
 <header>
     <div class="container text-center">
         <div class="fh5co-navbar-brand">
             <img src="../images/logo_header.png" alt="blackdome logo">
-            <a class="fh5co-logo" href="../home/">Black Dome Mountain Sports</a>
+            <a class="fh5co-logo" href="../">Black Dome Mountain Sports</a>
         </div>
         <nav id="fh5co-main-nav" role="navigation">
             <ul>
-                <li><a href="../home/">Home</a></li>
+                <li><a href="../">Home</a></li>
                 <li><a href="https://blackdome.locally.com/">Shop</a></li>
                 <li><a href="../about/">About Us</a></li>
                 <li><a href="../contact/" class="active">Contact</a></li>
@@ -103,12 +105,22 @@
         <div class="row">
             <div class="col-md-4 animate-box">
                 <h3>Our Address</h3>
+                <!-- These values come from site-content.js in the main folder. -->
                 <ul class="contact-info">
-                    <li><i class="icon-location-pin"></i>140 Tunnel Road Asheville, NC 28805</li>
-                    <li><i class="icon-phone2"></i>+1 (828) 251-2001</li>
-                    <li><i class="icon-mail"></i><a href="#">info@blackdome.com</a></li>
-                    <li><i class="icon-globe2"></i><a href="../home/">https://www.blackdome.com</a></li>
+                    <li><i class="icon-location-pin"></i>
+                        <span data-bd="addressLine1">12 Old Charlotte Hwy Ste 85</span><br>
+                        <span data-bd="addressLine2">Asheville, NC 28803</span>
+                        <span class="bd-address-note" data-bd="addressNote">Located in the Highland Brewing complex</span>
+                        <a class="bd-directions-link" data-bd-link="directions" href="https://www.google.com/maps/dir/?api=1&destination=12%20Old%20Charlotte%20Hwy%20Ste%2085%2C%20Asheville%2C%20NC%2028803" target="_blank" rel="noopener">Get directions</a>
+                    </li>
+                    <li><i class="icon-mail"></i><a data-bd-link="email" href="mailto:info@blackdome.com">info@blackdome.com</a></li>
+                    <li><i class="icon-globe2"></i><a href="../">https://www.blackdome.com</a></li>
                 </ul>
+
+                <div data-bd-hours-block>
+                    <h3>Store Hours</h3>
+                    <ul class="bd-hours" data-bd="hours"></ul>
+                </div>
             </div>
             <div class="col-md-8 animate-box">
                 <form action="https://api.web3forms.com/submit" method="POST">
@@ -142,14 +154,23 @@
     </div>
 </div>
 <!-- <div id="map" class="fh5co-map animate-box"></div> -->
-<div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.4748640606163!2d-82.53253872421628!3d35.591351272616464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859f3635bdd2073%3A0x6e39a2626299b557!2sBlack%20Dome%20Mountain%20Sports!5e0!3m2!1sen!2sus!4v1708889768365!5m2!1sen!2sus" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<!-- The map points at whatever address is set in site-content.js. No API key needed. -->
+<div id="map"><iframe data-bd="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.267262138902!2d-82.5015146241219!3d35.57179467262278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859f3bfc604ad0b%3A0x82b6c39ab02e1676!2s12%20Old%20Charlotte%20Hwy%20%2385%2C%20Asheville%2C%20NC%2028803!5e0!3m2!1sen!2sus!4v1785970638760!5m2!1sen!2sus" title="Map showing the Black Dome Mountain Sports store location" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
 <!-- END map -->
 <footer>
     <div id="footer" class="fh5co-border-line">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <p>&copy; 2024 Black Dome Mountain Sports <br>Copyright 2016 Free Html5. All Rights Reserved. </br></p>
+                    <!-- Store details. Values come from site-content.js -->
+                    <p class="bd-footer-info">
+                        <span data-bd="addressFull">12 Old Charlotte Hwy Ste 85, Asheville, NC 28803</span><br>
+                        <a data-bd-link="email" href="mailto:info@blackdome.com">info@blackdome.com</a>
+                    </p>
+                    <div class="bd-footer-hours" data-bd-hours-block>
+                        <ul class="bd-hours" data-bd="hours"></ul>
+                    </div>
+                    <p>&copy; 2026 Black Dome Mountain Sports</p>
                     <p class="fh5co-social-icons">
                         <a href="https://twitter.com/BlackDomeMtn" target="_blank"><i class="icon-twitter-with-circle"></i></a>
                         <a href="https://www.facebook.com/blackdome/" target="_blank"><i class="icon-facebook-with-circle"></i></a>
@@ -177,5 +198,9 @@
 <!-- Main JS (Do not remove) -->
 <script src="../js/main.js"></script>
 
+
+<!-- Store address, phone and hours. Edit site-content.js to change them. -->
+<script src="../site-content.js"></script>
+<script src="../js/site-render.js"></script>
 </body>
 </html>
